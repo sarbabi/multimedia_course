@@ -2,7 +2,6 @@
 #exercise: Time for action – viewing an existing animation (page 98)
 
 import pyglet
-
 animation = pyglet.image.load_animation("C:\\Images\\SimpleAnimation.gif")
 animSprite = pyglet.sprite.Sprite(animation)
 w = animSprite.width
