@@ -1,6 +1,7 @@
 #author: 941149002
 #exercise: Project: a simple bowling animation (page 108)
 
+
 from pyglet.gl import *
 import time
 
@@ -25,10 +26,10 @@ class SingleImageAnimation(pyglet.window.Window):
         """
         method for create the objects
         """
-        ball_img = pyglet.image.load('images/ball.png')
+        ball_img = pyglet.image.load('data/ball.png')
         ball_img.anchor_x = ball_img.width // 2
         ball_img.anchor_y = ball_img.height // 2
-        pin_img = pyglet.image.load('images/pin.png')
+        pin_img = pyglet.image.load('data/pin.png')
         pin_img.anchor_x = (pin_img.width // 4) * 3
         pin_img.anchor_y = 0
         self.ballSprite = pyglet.sprite.Sprite(ball_img)
@@ -90,7 +91,7 @@ class SingleImageAnimation(pyglet.window.Window):
 win = SingleImageAnimation()
 # Set window background color.
 pyglet.gl.glClearColor(0.5, 0.5, 0.9, 1)
-
+# Set the time to reply moveObjects method
 pyglet.clock.schedule_interval(win.moveObjects, 1.0 / 30)
 
 pyglet.app.run()
